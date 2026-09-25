@@ -1,0 +1,2153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kavya Sri Kota | Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            color: #171717;
+            margin: 0;
+        }
+
+        .navbar-brand {
+            letter-spacing: 1px;
+        }
+
+        .nav-link {
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #198754 !important;
+        }
+
+        .nav-link.active {
+            color: #198754 !important;
+        }
+
+        /* ================= HERO SECTION ================= */
+
+        .hero-section {
+            background: linear-gradient(135deg,
+                    #f8fbf8 0%,
+                    #ffffff 55%,
+                    #f1f8f4 100%);
+
+            overflow: hidden;
+        }
+
+
+        /* Small heading */
+
+        .hero-label {
+            display: inline-flex;
+            align-items: center;
+
+            color: #198754;
+
+            font-size: 0.85rem;
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+        }
+
+
+        /* Main heading */
+
+        .hero-title {
+            font-size: clamp(2.7rem, 6vw, 5rem);
+
+            line-height: 1.05;
+
+            font-weight: 800;
+
+            letter-spacing: -2px;
+        }
+
+
+        /* Job title */
+
+        .hero-role {
+            font-size: clamp(1.3rem, 2.5vw, 2rem);
+
+            font-weight: 600;
+
+            color: #343a40;
+        }
+
+
+        /* Description */
+
+        .hero-description {
+            max-width: 650px;
+
+            color: #6c757d;
+
+            font-size: 1.05rem;
+
+            line-height: 1.8;
+        }
+
+
+        /* Buttons */
+
+        .hero-btn {
+            padding: 12px 22px;
+
+            border-radius: 10px;
+
+            font-weight: 600;
+        }
+
+
+        /* ================= SOCIAL ICONS ================= */
+
+        .social-icon {
+
+            width: 40px;
+            height: 40px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid #dee2e6;
+
+            border-radius: 50%;
+
+            color: #212529;
+
+            background-color: white;
+
+            text-decoration: none;
+
+            transition: all 0.3s ease;
+        }
+
+
+        .social-icon:hover {
+
+            color: white;
+
+            background-color: #198754;
+
+            border-color: #198754;
+
+            transform: translateY(-3px);
+        }
+
+
+        /* ================= PROFILE IMAGE ================= */
+
+        .hero-image-wrapper {
+
+            position: relative;
+
+            width: min(100%, 430px);
+
+            margin: auto;
+
+            padding: 20px;
+        }
+
+
+        /* Green decorative shape */
+
+        .hero-image-bg {
+
+            position: absolute;
+
+            width: 80%;
+            height: 80%;
+
+            top: 10%;
+            right: 0;
+
+            background-color: #dff3e7;
+
+            border-radius: 40px;
+
+            transform: rotate(6deg);
+        }
+
+
+        /* Profile image */
+
+        .hero-image {
+
+            position: relative;
+
+            width: 100%;
+
+            aspect-ratio: 4 / 5;
+
+            object-fit: cover;
+
+            border-radius: 35px;
+
+            box-shadow:
+                0 25px 60px rgba(0, 0, 0, 0.15);
+
+        }
+
+
+        /* ================= FLOATING BADGE ================= */
+
+        .hero-badge {
+
+            position: absolute;
+
+            bottom: 45px;
+            left: -10px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            padding: 12px 18px;
+
+            background: white;
+
+            border-radius: 14px;
+
+            box-shadow:
+                0 12px 35px rgba(0, 0, 0, 0.12);
+        }
+
+
+        .hero-badge small {
+
+            display: block;
+
+            color: #6c757d;
+
+            font-size: 0.7rem;
+        }
+
+
+        .hero-badge strong {
+
+            display: block;
+
+            font-size: 0.85rem;
+        }
+
+
+        .badge-icon {
+
+            width: 38px;
+            height: 38px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background-color: #dff3e7;
+
+            color: #198754;
+
+            border-radius: 10px;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 991px) {
+
+            .hero-section {
+                text-align: center;
+            }
+
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-section .d-flex {
+                justify-content: center;
+            }
+
+            .hero-image-wrapper {
+                max-width: 380px;
+            }
+
+        }
+
+
+        @media (max-width: 575px) {
+
+            .hero-title {
+                font-size: 2.6rem;
+            }
+
+            .hero-role {
+                font-size: 1.25rem;
+            }
+
+            .hero-description {
+                font-size: 0.95rem;
+            }
+
+            .hero-image-wrapper {
+                width: 90%;
+            }
+
+            .hero-badge {
+                left: -5px;
+                bottom: 25px;
+            }
+
+        }
+
+        /* ================= ABOUT SECTION ================= */
+
+        .about-section {
+            background-color: #ffffff;
+            scroll-margin-top: 80px;
+        }
+
+        .section-label {
+            color: #198754;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .section-subtitle {
+            color: #6c757d;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* LEFT CONTENT */
+
+        .about-heading {
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-weight: 700;
+            line-height: 1.4;
+        }
+
+        .about-text {
+            color: #6c757d;
+            font-size: 1rem;
+            line-height: 1.9;
+            margin-bottom: 18px;
+        }
+
+        /* PERSONAL DETAILS */
+
+        .about-detail-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            height: 100%;
+            padding: 16px;
+            background-color: #f7faf8;
+            border: 1px solid #e8f0eb;
+            border-radius: 12px;
+        }
+
+        .about-detail-item>i {
+            font-size: 1.4rem;
+            color: #198754;
+        }
+
+        .about-detail-item small {
+            display: block;
+            color: #6c757d;
+            font-size: 0.8rem;
+            margin-bottom: 4px;
+        }
+
+        .about-detail-item strong {
+            display: block;
+            color: #212529;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* RIGHT SIDE CARDS */
+
+        .about-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .about-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            padding: 24px;
+            background-color: #f8fbf8;
+            border: 1px solid #e8f0eb;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .about-card:hover {
+            transform: translateY(-4px);
+            border-color: #198754;
+            box-shadow: 0 12px 30px rgba(25, 135, 84, 0.08);
+        }
+
+        .about-card-icon {
+            flex-shrink: 0;
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #dff3e7;
+            color: #198754;
+            border-radius: 12px;
+            font-size: 1.5rem;
+        }
+
+        .about-card h5 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .about-card p {
+            color: #6c757d;
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 575px) {
+
+            .about-section {
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+
+            .about-card {
+                padding: 18px;
+                gap: 14px;
+            }
+
+            .about-card-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
+            }
+
+            .about-detail-item {
+                padding: 12px;
+            }
+        }
+
+        /* ================= SKILLS SECTION ================= */
+
+        .skills-section {
+            background-color: #f8fbf8;
+            scroll-margin-top: 80px;
+        }
+
+        /* SKILL CARDS */
+
+        .skill-card {
+            padding: 30px;
+            background-color: #ffffff;
+            border: 1px solid #e5eee7;
+            border-radius: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-6px);
+            border-color: #198754;
+            box-shadow: 0 15px 35px rgba(25, 135, 84, 0.08);
+        }
+
+        /* ICON */
+
+        .skill-card-icon {
+            width: 58px;
+            height: 58px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 22px;
+            color: #198754;
+            background-color: #dff3e7;
+            border-radius: 14px;
+            font-size: 1.7rem;
+        }
+
+        /* CARD HEADING */
+
+        .skill-card h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        /* DESCRIPTION */
+
+        .skill-card-description {
+            color: #6c757d;
+            font-size: 0.92rem;
+            line-height: 1.7;
+            margin-bottom: 22px;
+        }
+
+        /* SKILL TAGS */
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tags span {
+            display: inline-block;
+            padding: 8px 14px;
+            color: #198754;
+            background-color: #eaf6ee;
+            border: 1px solid #d7ecde;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 575px) {
+
+            .skill-card {
+                padding: 24px;
+            }
+
+            .skill-card-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+                margin-bottom: 18px;
+            }
+
+        }
+
+        /* ================= PROJECTS SECTION ================= */
+
+        .projects-section {
+            background-color: #ffffff;
+            scroll-margin-top: 80px;
+        }
+
+        /* SECTION HEADING */
+
+        .projects-section .section-label {
+            color: #198754;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+        }
+
+        .projects-section .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .projects-section .section-subtitle {
+            color: #6c757d;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* PROJECT CARD */
+
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            padding: 30px;
+            background-color: #f8fbf8;
+            border: 1px solid #e5eee7;
+            border-radius: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #198754;
+            box-shadow: 0 15px 35px rgba(25, 135, 84, 0.08);
+        }
+
+        /* CARD TOP */
+
+        .project-card-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        /* PROJECT ICON */
+
+        .project-icon {
+            width: 58px;
+            height: 58px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #dff3e7;
+            color: #198754;
+            border-radius: 14px;
+            font-size: 1.7rem;
+            flex-shrink: 0;
+        }
+
+        /* PROJECT CATEGORY */
+
+        .project-category {
+            display: inline-block;
+            padding: 7px 12px;
+            background-color: #eaf6ee;
+            color: #198754;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* PROJECT TITLE */
+
+        .project-card h4 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            line-height: 1.5;
+            margin-bottom: 14px;
+            color: #171717;
+        }
+
+        /* PROJECT DESCRIPTION */
+
+        .project-description {
+            color: #6c757d;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 22px;
+        }
+
+        /* TECHNOLOGY TAGS */
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+        }
+
+        .project-tech span {
+            display: inline-block;
+            padding: 7px 12px;
+            background-color: #ffffff;
+            border: 1px solid #dce9df;
+            border-radius: 7px;
+            color: #495057;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* PROJECT BUTTONS */
+
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: auto;
+        }
+
+        .project-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 16px;
+            border-radius: 9px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        /* RESPONSIVE DESIGN */
+
+        @media (max-width: 767px) {
+
+            .project-card {
+                padding: 24px;
+            }
+
+            .project-card h4 {
+                font-size: 1.2rem;
+            }
+
+        }
+
+        @media (max-width: 575px) {
+
+            .project-card {
+                padding: 20px;
+                border-radius: 14px;
+            }
+
+            .project-card-top {
+                margin-bottom: 20px;
+            }
+
+            .project-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+
+            .project-card h4 {
+                font-size: 1.1rem;
+            }
+
+            .project-description {
+                font-size: 0.9rem;
+            }
+
+            .project-btn {
+                flex: 1 1 auto;
+                text-align: center;
+            }
+
+        }
+
+        /* Education Section */
+        .education-section {
+            background-color: #f5faf6;
+        }
+
+        .education-timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .education-card {
+            display: flex;
+            gap: 25px;
+            background: #ffffff;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 15px;
+            border: 1px solid #e2eee5;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+            transition: 0.3s ease;
+        }
+
+        .education-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .education-icon {
+            min-width: 60px;
+            height: 60px;
+            background: #e4f3e8;
+            color: #198754;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+        }
+
+        .education-content {
+            flex: 1;
+        }
+
+        .education-year {
+            display: inline-block;
+            color: #198754;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .education-content h4 {
+            font-size: 21px;
+            font-weight: 700;
+            color: #1c2b20;
+            margin-bottom: 8px;
+        }
+
+        .education-content h6 {
+            color: #198754;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .college-name,
+        .location {
+            color: #6c757d;
+            margin-bottom: 15px;
+        }
+
+        .education-score {
+            display: inline-block;
+            background: #e4f3e8;
+            color: #198754;
+            padding: 7px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 576px) {
+            .education-card {
+                padding: 20px;
+                gap: 15px;
+            }
+
+            .education-icon {
+                min-width: 45px;
+                height: 45px;
+                font-size: 20px;
+            }
+
+            .education-content h4 {
+                font-size: 18px;
+            }
+
+            .education-content h6 {
+                font-size: 14px;
+            }
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: #f5faf6;
+        }
+
+        .contact-info-card,
+        .contact-form-card {
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 15px;
+            border: 1px solid #e2eee5;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+            height: 100%;
+        }
+
+        .contact-info-card h3,
+        .contact-form-card h3 {
+            color: #1c2b20;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .contact-description {
+            color: #6c757d;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 25px;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-icon {
+            min-width: 50px;
+            height: 50px;
+            background: #e4f3e8;
+            color: #198754;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+        }
+
+        .contact-item h6 {
+            color: #1c2b20;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .contact-item a {
+            color: #6c757d;
+            text-decoration: none;
+            font-size: 14px;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-item a:hover {
+            color: #198754;
+        }
+
+        .contact-form-card .form-label {
+            font-weight: 600;
+            color: #344239;
+        }
+
+        .contact-form-card .form-control {
+            padding: 12px 15px;
+            border: 1px solid #dce6de;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .contact-form-card .form-control:focus {
+            border-color: #198754;
+            box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.12);
+        }
+
+        .contact-btn {
+            background: #198754;
+            color: #ffffff;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            border: none;
+        }
+
+        .contact-btn:hover {
+            background: #146c43;
+            color: #ffffff;
+        }
+
+        #formStatus {
+            font-size: 14px;
+        }
+
+        /* Responsive Contact Section */
+        @media (max-width: 576px) {
+
+            .contact-info-card,
+            .contact-form-card {
+                padding: 22px;
+            }
+
+            .contact-info-card h3,
+            .contact-form-card h3 {
+                font-size: 21px;
+            }
+        }
+
+        /* Footer Section */
+        .footer-section {
+            background: #14251b;
+            color: #ffffff;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+            padding-bottom: 40px;
+        }
+
+        .footer-logo {
+            font-size: 27px;
+            font-weight: 700;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .footer-logo span {
+            color: #43b77a;
+        }
+
+        .footer-brand p {
+            color: #b7c6bc;
+            line-height: 1.8;
+            margin-top: 15px;
+            max-width: 350px;
+        }
+
+        .footer-links h5,
+        .footer-social h5 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: #b7c6bc;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #43b77a;
+            padding-left: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #263d2e;
+            color: #ffffff;
+            border-radius: 50%;
+            font-size: 20px;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background: #198754;
+            transform: translateY(-4px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #34483a;
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .footer-bottom p {
+            color: #b7c6bc;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .back-to-top {
+            color: #43b77a;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .back-to-top:hover {
+            color: #ffffff;
+        }
+
+        /* Responsive Footer */
+        @media (max-width: 768px) {
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+                gap: 35px;
+            }
+
+            .footer-brand {
+                grid-column: 1 / -1;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .footer-brand {
+                grid-column: auto;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+
+</head>
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+
+    <div class="container py-2">
+
+        <!-- Logo -->
+        <a class="navbar-brand fw-bold" href="#home">
+            KAVYA SRI
+        </a>
+
+
+        <!-- Mobile Menu Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#portfolioNavbar"
+            aria-controls="portfolioNavbar" aria-expanded="false" aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <!-- Navigation Links -->
+        <div class="collapse navbar-collapse" id="portfolioNavbar">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#home">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">
+                        About
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">
+                        Skills
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">
+                        Projects
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#education">Education</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">
+                        Contact
+                    </a>
+                </li>
+
+                <!-- GitHub Button -->
+                <li class="nav-item">
+
+                    <a href="https://github.com/KAVYASRIKOTA-12" target="_blank" class="btn btn-dark btn-sm px-3">
+
+                        <i class="bi bi-github me-1"></i>
+                        GitHub
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+<!-- ================= HERO SECTION ================= -->
+
+<section id="home" class="hero-section">
+
+    <div class="container">
+
+        <div class="row align-items-center min-vh-100 g-5">
+
+            <!-- LEFT SIDE -->
+            <div class="col-lg-7">
+
+                <p class="hero-label mb-3">
+                    <i class="bi bi-stars me-2"></i>
+                    WELCOME TO MY PORTFOLIO
+                </p>
+
+                <h1 class="hero-title mb-3">
+                    Hi, I'm
+                    <span class="text-success">
+                        Kavya Sri Kota
+                    </span>
+                </h1>
+
+                <h2 class="hero-role mb-4">
+                    Python & Full-Stack Enthusiast
+                </h2>
+
+                <p class="hero-description mb-4">
+
+                    I'm a Computer Science Engineering student with
+                    a strong interest in Python, full-stack development,
+                    SQL, and problem solving. I enjoy building practical
+                    applications and continuously improving my technical
+                    skills through projects and hands-on learning.
+
+                </p>
+
+
+                <!-- BUTTONS -->
+
+                <div class="d-flex flex-wrap gap-3 mb-4">
+
+                    <a href="#projects" class="btn btn-success hero-btn">
+
+                        View Projects
+
+                        <i class="bi bi-arrow-right ms-2"></i>
+
+                    </a>
+
+
+                    <a href="assets/resume.pdf" target="_blank" class="btn btn-outline-dark hero-btn">
+
+                        <i class="bi bi-eye me-2"></i>
+
+                        View Resume
+
+                    </a>
+
+                </div>
+
+
+                <!-- SOCIAL LINKS -->
+
+                <div class="d-flex align-items-center gap-3">
+
+                    <span class="text-secondary small">
+                        Connect with me
+                    </span>
+
+
+                    <!-- GitHub -->
+
+                    <a href="https://github.com/KAVYASRIKOTA-12" target="_blank" class="social-icon">
+
+                        <i class="bi bi-github"></i>
+
+                    </a>
+
+
+                    <!-- LinkedIn -->
+
+                    <a href="https://www.linkedin.com/in/kota-kavya-sri" target="_blank" class="social-icon">
+
+                        <i class="bi bi-linkedin"></i>
+
+                    </a>
+
+
+                    <!-- Email -->
+
+                    <a href="mailto:kavyaasrikota@gmail.com" class="social-icon">
+
+                        <i class="bi bi-envelope"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="col-lg-5">
+
+                <div class="hero-image-wrapper">
+
+                    <!-- Decorative background -->
+                    <div class="hero-image-bg"></div>
+
+
+                    <!-- Profile photo -->
+
+                    <img src="assets/profile.jpg" alt="Kavya Sri Kota" class="hero-image">
+
+
+                    <!-- Floating card -->
+
+                    <div class="hero-badge">
+
+                        <div class="badge-icon">
+
+                            <i class="bi bi-code-slash"></i>
+
+                        </div>
+
+                        <div>
+
+                            <small>
+                                Currently
+                            </small>
+
+                            <strong>
+                                Learning & Building
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+<!-- ================= ABOUT SECTION ================= -->
+
+<section id="about" class="about-section py-5">
+
+    <div class="container py-5">
+
+        <!-- SECTION HEADING -->
+        <div class="text-center mb-5">
+
+            <p class="section-label mb-2">GET TO KNOW ME</p>
+
+            <h2 class="section-title">
+                About <span class="text-success">Me</span>
+            </h2>
+
+            <p class="section-subtitle">
+                A little about my background, interests, and goals.
+            </p>
+
+        </div>
+
+        <div class="row align-items-center g-5">
+
+            <!-- LEFT SIDE: ABOUT CONTENT -->
+            <div class="col-lg-7">
+
+                <h3 class="about-heading mb-4">
+                    Passionate about learning and building
+                    <span class="text-success">technology</span>
+                </h3>
+
+                <p class="about-text">
+                    I'm Kavya Sri Kota, a Computer Science Engineering
+                    graduate with an interest in software development
+                    and building practical applications.
+                </p>
+
+                <p class="about-text">
+                    I have a foundation in Python, full-stack development,
+                    SQL, and Data Structures and Algorithms. I enjoy
+                    exploring new technologies, solving problems, and
+                    applying what I learn through hands-on projects.
+                </p>
+
+                <p class="about-text">
+                    My goal is to begin my career in the software industry,
+                    contribute to meaningful projects, and continue
+                    developing my technical and problem-solving skills.
+                </p>
+
+                <!-- PERSONAL DETAILS -->
+                <div class="about-details mt-4">
+
+                    <div class="row g-3">
+
+                        <div class="col-sm-6">
+                            <div class="about-detail-item">
+                                <i class="bi bi-mortarboard-fill"></i>
+                                <div>
+                                    <small>Education</small>
+                                    <strong>B.Tech in CSE</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="about-detail-item">
+                                <i class="bi bi-code-slash"></i>
+                                <div>
+                                    <small>Primary Skill</small>
+                                    <strong>Python</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="about-detail-item">
+                                <i class="bi bi-laptop"></i>
+                                <div>
+                                    <small>Area of Interest</small>
+                                    <strong>Full-Stack Development</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="about-detail-item">
+                                <i class="bi bi-lightbulb-fill"></i>
+                                <div>
+                                    <small>Focus</small>
+                                    <strong>Problem Solving</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT SIDE: FOCUS CARDS -->
+            <div class="col-lg-5">
+
+                <div class="about-cards">
+
+                    <!-- CARD 1 -->
+                    <div class="about-card">
+
+                        <div class="about-card-icon">
+                            <i class="bi bi-code-square"></i>
+                        </div>
+
+                        <div>
+                            <h5>Software Development</h5>
+                            <p>
+                                Building practical applications and
+                                improving my coding skills through projects.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="about-card">
+
+                        <div class="about-card-icon">
+                            <i class="bi bi-database-fill"></i>
+                        </div>
+
+                        <div>
+                            <h5>Python & SQL</h5>
+                            <p>
+                                Working with Python programming,
+                                database concepts, and SQL queries.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div class="about-card">
+
+                        <div class="about-card-icon">
+                            <i class="bi bi-diagram-3-fill"></i>
+                        </div>
+
+                        <div>
+                            <h5>Continuous Learning</h5>
+                            <p>
+                                Practicing Data Structures and Algorithms
+                                and exploring new development concepts.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SKILLS SECTION ================= -->
+
+<section id="skills" class="skills-section py-5">
+
+    <div class="container py-5">
+
+        <!-- SECTION HEADING -->
+        <div class="text-center mb-5">
+
+            <p class="section-label mb-2">MY TECHNICAL EXPERTISE</p>
+
+            <h2 class="section-title">
+                My <span class="text-success">Skills</span>
+            </h2>
+
+            <p class="section-subtitle">
+                Technologies and concepts I use while learning and building projects.
+            </p>
+
+        </div>
+
+        <!-- SKILL CARDS -->
+        <div class="row g-4">
+
+            <!-- PROGRAMMING -->
+            <div class="col-md-6 col-lg-4">
+
+                <div class="skill-card h-100">
+
+                    <div class="skill-card-icon">
+                        <i class="bi bi-code-slash"></i>
+                    </div>
+
+                    <h4>Programming</h4>
+
+                    <p class="skill-card-description">
+                        Programming languages for building applications
+                        and solving problems.
+                    </p>
+
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- FRONTEND -->
+            <div class="col-md-6 col-lg-4">
+
+                <div class="skill-card h-100">
+
+                    <div class="skill-card-icon">
+                        <i class="bi bi-window"></i>
+                    </div>
+
+                    <h4>Frontend Development</h4>
+
+                    <p class="skill-card-description">
+                        Building responsive and interactive
+                        user interfaces.
+                    </p>
+
+                    <div class="skill-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Bootstrap</span>
+                        <span>React</span>
+                        <span>Responsive UI</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- DATABASE -->
+            <div class="col-md-6 col-lg-4">
+
+                <div class="skill-card h-100">
+
+                    <div class="skill-card-icon">
+                        <i class="bi bi-database"></i>
+                    </div>
+
+                    <h4>Database</h4>
+
+                    <p class="skill-card-description">
+                        Working with relational databases
+                        and querying data.
+                    </p>
+
+                    <div class="skill-tags">
+                        <span>MySQL</span>
+                        <span>MongoDB</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- TOOLS -->
+            <div class="col-md-6 col-lg-4">
+
+                <div class="skill-card h-100">
+
+                    <div class="skill-card-icon">
+                        <i class="bi bi-git"></i>
+                    </div>
+
+                    <h4>Tools & Version Control</h4>
+
+                    <p class="skill-card-description">
+                        Managing code, tracking changes,
+                        and maintaining project repositories.
+                    </p>
+
+                    <div class="skill-tags">
+                        <span>Git</span>
+                        <span>GitHub</span>
+                        <span>Render</span>
+                        <span>VS Code</span>
+                        <span>MySQL Workbench</span>
+                        <span>Jupyter Notebook</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- DSA -->
+            <div class="col-md-6 col-lg-4">
+
+                <div class="skill-card h-100">
+
+                    <div class="skill-card-icon">
+                        <i class="bi bi-diagram-3"></i>
+                    </div>
+
+                    <h4>Core Concepts</h4>
+
+                    <p class="skill-card-description">
+                        Strengthening programming fundamentals
+                        and problem-solving skills.
+                    </p>
+
+                    <div class="skill-tags">
+                        <span>DSA</span>
+                        <span>OOP</span>
+                        <span>Problem Solving</span>
+                        <span>DBMS</span>
+                        <span>CRUD Operations</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- FULL STACK -->
+            <div class="col-md-6 col-lg-4">
+
+                <div class="skill-card h-100">
+
+                    <div class="skill-card-icon">
+                        <i class="bi bi-layers"></i>
+                    </div>
+
+                    <h4>Full-Stack Development</h4>
+
+                    <p class="skill-card-description">
+                        Exploring frontend and backend concepts
+                        to develop complete web applications.
+                    </p>
+
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>REST APIs</span>
+                        <span>Pandas</span>
+                        <span>Numpy</span>
+                        <span>Scikit-learn</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Machine Learning/AI -->
+            <div class="col-md-6 col-lg-4">
+
+                <div class="skill-card h-100">
+
+                    <div class="skill-card-icon">
+                        <i class="bi bi-robot"></i>
+                    </div>
+
+                    <h4>Machine Learning / AI</h4>
+
+                    <p class="skill-card-description">
+                        Learning machine learning concepts to analyze data,
+                        classify patterns, and make predictions.
+                    </p>
+
+                    <div class="skill-tags">
+                        <span>Machine Learning</span>
+                        <span>Feature Extraction</span>
+                        <span>Classification</span>
+                        <span>Model Prediction</span>
+                        <span>Model Evaluation</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROJECTS SECTION ================= -->
+
+<section id="projects" class="projects-section py-5">
+
+    <div class="container py-5">
+
+        <!-- SECTION HEADING -->
+        <div class="text-center mb-5">
+
+            <p class="section-label mb-2">MY RECENT WORK</p>
+
+            <h2 class="section-title">
+                My <span class="text-success">Projects</span>
+            </h2>
+
+            <p class="section-subtitle">
+                A selection of projects I've built while learning
+                and applying my technical skills.
+            </p>
+
+        </div>
+
+        <!-- PROJECT CARDS -->
+        <div class="row g-4 justify-content-center">
+
+            <!-- PROJECT 1: MALICIOUS AD NETWORK DETECTION -->
+            <div class="col-md-6">
+
+                <div class="project-card h-100">
+
+                    <div class="project-card-top">
+
+                        <div class="project-icon">
+                            <i class="bi bi-shield-lock"></i>
+                        </div>
+
+                        <span class="project-category">
+                            Cybersecurity
+                        </span>
+
+                    </div>
+
+                    <h4>Malicious AD Network Detection</h4>
+
+                    <p class="project-description">
+                        A web application that analyzes URLs and
+                        calculates a risk score to help identify
+                        potentially malicious links.
+                    </p>
+
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>HTML</span>
+                        <span>JavaScript</span>
+                        <span>Scikit-learn</span>
+                        <span>Pandas</span>
+                        <span>Joblib</span>
+                    </div>
+
+                    <div class="project-links mt-4">
+
+                        <a href="https://malicious-ad-network-detection.onrender.com/" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-success project-btn">
+
+                            <i class="bi bi-box-arrow-up-right me-2"></i>
+                            Live Demo
+
+                        </a>
+
+                        <a href="https://github.com/KAVYASRIKOTA-12/Malicious-AD-Network-Detection" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-outline-dark project-btn">
+
+                            <i class="bi bi-github me-2"></i>
+                            Source Code
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- PROJECT 2: AI-POWERED FARMER ASSISTANT -->
+            <div class="col-md-6">
+
+                <div class="project-card h-100">
+
+                    <div class="project-card-top">
+
+                        <div class="project-icon">
+                            <i class="bi bi-tree tree-icon"></i>
+                        </div>
+
+                        <span class="project-category">
+                            AI / Full Stack
+                        </span>
+
+                    </div>
+
+                    <h4>AI-Powered Farmer Assistant</h4>
+
+                    <p class="project-description">
+                        An AI-powered agricultural assistance application
+                        designed to provide farmers with useful information
+                        and support through a web interface.
+                    </p>
+
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>FastAPI</span>
+                        <span>HTML</span>
+                        <span>JavaScript</span>
+                        <span>React</span>
+                        <span>TensorFlow</span>
+                        <span>MONGO DB</span>
+                    </div>
+
+                    <div class="project-links mt-4">
+
+                        <a href="https://agriai-frontend-towz.onrender.com" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-success project-btn">
+
+                            <i class="bi bi-box-arrow-up-right me-2"></i>
+                            Live Demo
+
+                        </a>
+
+                        <a href="https://agriai-backend-a6em.onrender.com/" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-outline-dark project-btn">
+
+                            <i class="bi bi-server me-2"></i>
+                            Backend
+
+                        </a>
+
+                        <a href="https://github.com/KAVYASRIKOTA-12/AI-Powered-Farmer-Assistant" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-outline-dark project-btn">
+
+                            <i class="bi bi-github me-2"></i>
+                            Source Code
+
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Education Section -->
+<section id="education" class="education-section py-5">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="section-title">My Qualification</h2>
+            <p class="section-subtitle">
+                My academic journey and qualification
+            </p>
+        </div>
+
+        <div class="education-timeline">
+
+            <!-- B.Tech -->
+            <div class="education-card">
+                <div class="education-icon">
+                    <i class="bi bi-mortarboard-fill"></i>
+                </div>
+
+                <div class="education-content">
+                    <span class="education-year">2022 – 2026</span>
+                    <h4>Bachelor of Technology (B.Tech)</h4>
+                    <h6>Computer Science and Engineering</h6>
+                    <p class="college-name">
+                        <i class="bi bi-building-fill"></i>
+                        St. Mary’s Women’s Engineering College
+                    </p>
+                    <p class="location">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        Budampadu, India
+                    </p>
+                    <span class="education-score">CGPA: 7.29</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section py-5">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">
+                Have a question or an opportunity? Feel free to connect with me.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Contact Information -->
+            <div class="col-lg-5">
+                <div class="contact-info-card h-100">
+
+                    <h3>Let's Connect</h3>
+                    <p class="contact-description">
+                        I'm open to entry-level opportunities, collaborations,
+                        and discussions about software development.
+                    </p>
+
+                    <!-- Email -->
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+                        <div>
+                            <h6>Email</h6>
+                            <a href="mailto:kavyaasrikota@gmail.com">
+                                kavyaasrikota@gmail.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- LinkedIn -->
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="bi bi-linkedin"></i>
+                        </div>
+                        <div>
+                            <h6>LinkedIn</h6>
+                            <a href="https://www.linkedin.com/in/kota-kavya-sri-491599293/" target="_blank"
+                                rel="noopener noreferrer">
+                                Connect on LinkedIn
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- GitHub -->
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="bi bi-github"></i>
+                        </div>
+                        <div>
+                            <h6>GitHub</h6>
+                            <a href="https://github.com/KAVYASRIKOTA-12" target="_blank" rel="noopener noreferrer">
+                                Explore My GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-lg-7">
+                <div class="contact-form-card">
+
+                    <h3>Send Me a Message</h3>
+
+                    <form id="contactForm">
+
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="subject" placeholder="Enter subject" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="5"
+                                placeholder="Write your message here..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn contact-btn">
+                            Send Message <i class="bi bi-send-fill ms-2"></i>
+                        </button>
+
+                        <p id="formStatus" class="mt-3 mb-0"></p>
+                    </form>
+                    <p id="successMessage" style="display: none; color: green;">
+                        Message submitted successfully!
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer-section">
+    <div class="container">
+
+        <div class="footer-content">
+
+            <!-- Name and Description -->
+            <div class="footer-brand">
+                <a href="#home" class="footer-logo">
+                    Kavya Sri Kota<span>.</span>
+                </a>
+
+                <p>
+                    Building my skills in Python, Full-Stack Development,
+                    and problem-solving to create meaningful digital solutions.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+                <h5>Quick Links</h5>
+
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <!-- Social Links -->
+            <div class="footer-social">
+                <h5>Connect With Me</h5>
+
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/kota-kavya-sri-491599293/" target="_blank"
+                        rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+
+                    <a href="https://github.com/KAVYASRIKOTA-12" target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub">
+                        <i class="bi bi-github"></i>
+                    </a>
+
+                    <a href="mailto:kotakavyaasri@outlook.com" aria-label="Email">
+                        <i class="bi bi-envelope-fill"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>
+                &copy; <span id="currentYear"></span>
+                Kavya Sri Kota. All Rights Reserved.
+            </p>
+
+            <a href="#home" class="back-to-top">
+                Back to Top <i class="bi bi-arrow-up"></i>
+            </a>
+        </div>
+
+    </div>
+</footer>
+
+<body>
+
+
+    <!-- Portfolio content will be added here -->
+
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+        // Contact Form
+        const contactForm = document.querySelector("#contactForm");
+
+        contactForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const name = document.querySelector("#name").value;
+            const email = document.querySelector("#email").value;
+            const subject = document.querySelector("#subject").value;
+            const message = document.querySelector("#message").value;
+
+            const mailSubject = encodeURIComponent(subject);
+            const mailBody = encodeURIComponent(
+                `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+            );
+
+            document.querySelector("#formStatus").textContent =
+                "Opening your email application...";
+
+            window.location.href =
+                `mailto:kavyaasrikota@gmail.com?subject=${mailSubject}&body=${mailBody}`;
+        });
+        // Automatically update the copyright year
+        document.querySelector("#currentYear").textContent =
+            new Date().getFullYear();
+    </script>
+    <script>
+        const form = document.getElementById("contactForm");
+        const successMessage = document.getElementById("successMessage");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            form.reset();
+
+            successMessage.style.display = "block";
+        });
+    </script>
+
+</body>
+
+</html>
