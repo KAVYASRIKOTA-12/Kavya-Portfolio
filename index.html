@@ -1103,6 +1103,32 @@
                 text-align: center;
             }
         }
+
+        /* ================= LANGUAGES SECTION ================= */
+
+        .language-card {
+            transition: all 0.3s ease;
+            border: 1px solid #e5eee7 !important;
+        }
+
+        .language-card:hover {
+            transform: translateY(-6px);
+            border-color: #198754 !important;
+            box-shadow: 0 15px 35px rgba(25, 135, 84, 0.10) !important;
+        }
+
+        .language-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #dff3e7;
+            color: #198754;
+            border-radius: 50%;
+            font-size: 2rem;
+        }
     </style>
 
 </head>
@@ -1158,6 +1184,10 @@
 
                 <li class="nav-item">
                     <a class="nav-link" href="#education">Education</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#training">Training</a>
                 </li>
 
                 <li class="nav-item">
@@ -1221,13 +1251,12 @@
                 </h2>
 
                 <p class="hero-description mb-4">
-
-                    I'm a Computer Science Engineering student with
-                    a strong interest in Python, full-stack development,
-                    SQL, and problem solving. I enjoy building practical
-                    applications and continuously improving my technical
-                    skills through projects and hands-on learning.
-
+                    Computer Science and Engineering graduate with practical
+                    experience in Python, SQL, machine learning, and web
+                    application development. Seeking an entry-level software
+                    engineering role to apply programming, OOP, problem-solving,
+                    and database management skills while building reliable
+                    software solutions.
                 </p>
 
 
@@ -1556,6 +1585,7 @@
                     <div class="skill-tags">
                         <span>Python</span>
                         <span>JavaScript</span>
+                        <span>C</span>
                     </div>
 
                 </div>
@@ -1582,7 +1612,7 @@
                         <span>HTML</span>
                         <span>CSS</span>
                         <span>Bootstrap</span>
-                        <span>React</span>
+                        <span>React.js</span>
                         <span>Responsive UI</span>
                     </div>
 
@@ -1692,6 +1722,7 @@
                         <span>Python</span>
                         <span>Flask</span>
                         <span>REST APIs</span>
+                        <span>FastAPI</span>
                         <span>Pandas</span>
                         <span>Numpy</span>
                         <span>Scikit-learn</span>
@@ -1884,6 +1915,44 @@
                 </div>
 
             </div>
+            <!-- PROJECT 3: MONEYMATE -->
+            <div class="col-md-6">
+                <div class="project-card h-100">
+
+                    <div class="project-card-top">
+                        <div class="project-icon">
+                            <i class="bi bi-wallet2"></i>
+                        </div>
+                        <span class="project-category">React App</span>
+                    </div>
+
+                    <h4>MoneyMate — Personal Finance Tracker</h4>
+
+                    <p class="project-description">
+                        A full-featured expense tracker built with React 19,
+                        Vite, and Bootstrap 5 with user authentication and
+                        localStorage persistence.
+                    </p>
+
+                    <div class="project-tech">
+                        <span>React 19</span>
+                        <span>Vite</span>
+                        <span>React Router v7</span>
+                        <span>Bootstrap 5</span>
+                        <span>Context API</span>
+                        <span>LocalStorage</span>
+                    </div>
+
+                    <div class="project-links mt-4">
+                        <a href="https://github.com/KAVYASRIKOTA-12/Money-Mate" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-outline-dark project-btn">
+                            <i class="bi bi-github me-2"></i>
+                            Source Code
+                        </a>
+                    </div>
+
+                </div>
+            </div>
 
         </div>
 
@@ -1930,7 +1999,43 @@
     </div>
 </section>
 
+<!-- ================= TRAINING EXPERIENCE SECTION ================= -->
+<section id="training" class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <p class="text-success fw-semibold text-uppercase small">Learning Journey</p>
+            <h2 class="section-title">Training <span class="text-success">Experience</span></h2>
+            <p class="section-subtitle">Ongoing training to strengthen my development skills.</p>
+        </div>
 
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="card border-0 shadow-sm rounded-4">
+                    <div class="card-body p-4 p-lg-5">
+                        <div class="d-flex justify-content-between flex-wrap gap-2 mb-3">
+                            <span class="badge text-bg-success">05/2026 – Present</span>
+                            <i class="bi bi-book-half text-success fs-3"></i>
+                        </div>
+                        <h4 class="fw-bold">Python Full Stack Trainee</h4>
+                        <h6 class="text-success mb-3">Codegnan</h6>
+                        <ul class="text-secondary ps-3 mb-0">
+                            <li class="mb-2">Strengthening Python programming, OOP concepts, and problem-solving skills
+                                through hands-on practice.</li>
+                            <li class="mb-2">Learning front-end development using HTML, CSS, JavaScript, and Bootstrap.
+                            </li>
+                            <li class="mb-2">Practicing SQL queries, joins, and relational database operations using
+                                MySQL.</li>
+                            <li class="mb-2">Currently completing Flask training to develop Python-based web
+                                applications and integrate databases.</li>
+                            <li>Practicing Data Structures and Algorithms to improve logical thinking and coding
+                                efficiency.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- ================= INTERNSHIPS SECTION ================= -->
 <section id="internships" class="py-5 bg-light">
@@ -1952,8 +2057,10 @@
                         <h4 class="fw-bold">Full Stack Development (MERN) Internship</h4>
                         <h6 class="text-success mb-3">Blackbucks</h6>
                         <ul class="text-secondary ps-3 mb-0">
-                            <li class="mb-2">Developed full-stack web applications using React, Node.js, JavaScript, and MongoDB.</li>
-                            <li class="mb-2">Implemented front-end components and supported back-end application development using Node.js.</li>
+                            <li class="mb-2">Developed full-stack web applications using React, Node.js, JavaScript, and
+                                MongoDB.</li>
+                            <li class="mb-2">Implemented front-end components and supported back-end application
+                                development using Node.js.</li>
                             <li>Practiced version control and deployment tools such as Git.</li>
                         </ul>
                     </div>
@@ -1971,8 +2078,10 @@
                         <h6 class="text-success mb-3">Plasmid</h6>
                         <ul class="text-secondary ps-3 mb-0">
                             <li class="mb-2">Developed responsive web pages using modern JavaScript technologies.</li>
-                            <li class="mb-2">Applied web development concepts to build and enhance user-facing web interfaces.</li>
-                            <li>Gained hands-on experience in web application development and front-end implementation.</li>
+                            <li class="mb-2">Applied web development concepts to build and enhance user-facing web
+                                interfaces.</li>
+                            <li>Gained hands-on experience in web application development and front-end implementation.
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -2039,7 +2148,69 @@
         </div>
     </div>
 </section>
+<!-- ================= LANGUAGES KNOWN SECTION ================= -->
+<section id="languages" class="py-5" style="background-color: #ffffff; scroll-margin-top: 80px;">
+    <div class="container">
 
+        <!-- SECTION HEADING -->
+        <div class="text-center mb-5">
+            <p class="text-success fw-semibold text-uppercase small mb-2" style="letter-spacing: 1.5px;">
+                Communication
+            </p>
+            <h2 class="section-title">
+                Languages <span class="text-success">Known</span>
+            </h2>
+            <p class="section-subtitle">
+                Languages I speak, read, and write.
+            </p>
+        </div>
+
+        <!-- LANGUAGE CARDS -->
+        <div class="row g-4 justify-content-center">
+
+            <!-- TELUGU -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card h-100 border-0 shadow-sm rounded-4 text-center language-card">
+                    <div class="card-body p-4">
+                        <div class="language-icon mb-3">
+                            <i class="bi bi-translate"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Telugu</h5>
+                        <p class="text-secondary small mb-0">Native</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HINDI -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card h-100 border-0 shadow-sm rounded-4 text-center language-card">
+                    <div class="card-body p-4">
+                        <div class="language-icon mb-3">
+                            <i class="bi bi-translate"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Hindi</h5>
+                        <p class="text-secondary small mb-0">Conversational</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ENGLISH -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card h-100 border-0 shadow-sm rounded-4 text-center language-card">
+                    <div class="card-body p-4">
+                        <div class="language-icon mb-3">
+                            <i class="bi bi-translate"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">English</h5>
+                        <p class="text-secondary small mb-0">Professional Proficiency</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
 <!-- Contact Section -->
 <section id="contact" class="contact-section py-5">
     <div class="container">
@@ -2189,6 +2360,7 @@
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
                 <a href="#education">Education</a>
+                <a href="#training">Training</a>
                 <a href="#internships">Internships</a>
                 <a href="#certifications">Certifications</a>
                 <a href="#contact">Contact</a>
